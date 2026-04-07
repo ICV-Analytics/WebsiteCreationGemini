@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building & Deploying with Gemini</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        .step-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+
+        /* Specific Color Highlights */
+        .hl-blue {
+            background: rgba(59, 130, 246, 0.15);
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #1d4ed8;
+        }
+
+        .hl-green {
+            background: rgba(34, 197, 94, 0.15);
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #15803d;
+        }
+
+        .hl-red {
+            background: rgba(239, 68, 68, 0.15);
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #b91c1c;
+        }
+
+        .hl-gold {
+            background: rgba(234, 179, 8, 0.15);
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #a16207;
+        }
+
+        .progress-line {
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e5e7eb;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-green-600">
+                Gemini Workflow
+            </h1>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
+                <a href="#creation" class="hover:text-blue-600 transition">Creation</a>
+                <a href="#local" class="hover:text-green-600 transition">Local Setup</a>
+                <a href="#deployment" class="hover:text-red-600 transition">Deployment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-4xl mx-auto px-6 pt-16 pb-12 text-center">
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
+            Website Creation <span class="text-blue-600">&</span> Deployment
+        </h2>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+            A specialized guide for website creation and deployment. Follow the steps to move from an AI prompt to a professional live website.
+        </p>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-24 relative">
+        <div class="progress-line hidden md:block"></div>
+
+        <!-- Section 1: Creation (BLUE) -->
+        <section id="creation" class="relative z-10 mb-16">
+            <div class="flex items-start mb-8">
+                <div class="hidden md:flex items-center justify-center w-16 h-16 rounded-full step-gradient text-white font-bold text-xl shrink-0 mr-8 shadow-lg">1</div>
+                <div class="glass-card p-8 rounded-2xl w-full border-l-4 border-blue-500">
+                    <h3 class="text-2xl font-bold mb-4 text-blue-700">Phase I: The Creative Spark (AI Interface)</h3>
+                    <p class="mb-4 leading-relaxed">
+                        The journey begins by initiating a new conversation within the Gemini interface. To unlock the full potential of code visualization, you must click on the <span class="hl-blue">Tools icon</span> and specifically select <span class="hl-blue">Canvas</span>. This environment is designed for collaborative coding and real-time previews, which is essential for ensuring your website looks exactly how you intend.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        Before entering your instructions, ensure you switch the AI model from <span class="hl-blue">fast to thinking</span> mode. This allows the model to process complex architectural requests with higher precision. You can then craft your prompt, such as asking Gemini to visualize a website based on an attached PDF or a set of rules. Upload any necessary files at this stage to provide the context needed for a professional result.
+                    </p>
+                    <p class="leading-relaxed">
+                        Once the initial draft is generated, the process moves into <span class="hl-blue">fine-tuning</span>. You should interact with the AI to adjust visuals, color schemes, and layout structures until the end result meets your specific business standards.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Local Setup (GREEN) -->
+        <section id="local" class="relative z-10 mb-16">
+            <div class="flex items-start mb-8">
+                <div class="hidden md:flex items-center justify-center w-16 h-16 rounded-full step-gradient text-white font-bold text-xl shrink-0 mr-8 shadow-lg">2</div>
+                <div class="glass-card p-8 rounded-2xl w-full border-l-4 border-green-500">
+                    <h3 class="text-2xl font-bold mb-4 text-green-700">Phase II: Local Management (macOS)</h3>
+                    <p class="mb-4 leading-relaxed">
+                        When you are satisfied with the digital preview, click on the <span class="hl-green">Code tab</span> within Gemini and copy the entire block of HTML. On your MacBook, open the <span class="hl-green">TextEdit</span> application to begin the local saving process. Create a new document and paste your code directly into the editor.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        To save the file correctly, hold the <span class="hl-green">COMMAND + S</span> keys. It is vital to name this document exactly <span class="hl-green">index.html</span> so that web servers recognize it as your homepage.
+                    </p>
+                    <p class="leading-relaxed">
+                        After saving, navigate through your folders to your <span class="hl-green">Favourites</span> and select the TextEdit directory if prompted, or simply organize your work by creating a <span class="hl-green">new folder</span> with a fitting title. Placing your index.html file inside this specific folder keeps your project organized and ready for the cloud.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Deployment (RED & GOLD) -->
+        <section id="deployment" class="relative z-10">
+            <div class="flex items-start mb-8">
+                <div class="hidden md:flex items-center justify-center w-16 h-16 rounded-full step-gradient text-white font-bold text-xl shrink-0 mr-8 shadow-lg">3</div>
+                <div class="glass-card p-8 rounded-2xl w-full border-l-4 border-red-500">
+                    <h3 class="text-2xl font-bold mb-4 text-red-700">Phase III: Global Deployment (GitHub)</h3>
+                    <p class="mb-4 leading-relaxed">
+                        With your local file ready, log into your GitHub account and click the button to create a <span class="hl-red">New Repository</span>. Choose a name for your project; remember that this name will form the end of your public URL. It is good practice to add a brief description of the project and check the box to include a <span class="hl-red">README</span> file.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        Once the repository is created, select the <span class="hl-red">Add file</span> button followed by <span class="hl-red">Upload files</span>. You can now choose the index.html file from the folder you created on your MacBook. Finalize this upload by clicking the green <span class="hl-red">Commit changes</span> button to save the file to the cloud.
+                    </p>
+                    <p class="mb-4 leading-relaxed">
+                        The final configuration happens in the <span class="hl-gold">Settings</span> tab of your repository. Scroll down to the Code and automation section and select <span class="hl-gold">Pages</span>. Ensure the source is set to <span class="hl-gold">Deploy from a branch</span> and that the branch is assigned to <span class="hl-gold">Main</span> with the folder set to <span class="hl-gold">/ (root)</span>. 
+                    </p>
+                    <p class="leading-relaxed">
+                        After clicking <span class="hl-gold">Save</span>, your website will be live. You can return to your repository overview to find the link and share your interactive creation with the world.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-lg font-bold text-white tracking-wide">Gemini Workflow</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
